@@ -1,0 +1,136 @@
+include block/content
+include block/mixin
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Website
+    body
+        .main-header__wrap
+            header.main-header
+                nav.main-nav
+                    .logo Forest
+                    ul.nav-list
+                        +li("nav") Home
+                        +li("nav") Blog
+                        +li("nav") Our services
+                        +li("nav") Team
+                        +li("nav") Contact
+                h1.main-header__title  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                p.main-header__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, alias dolore similique velit, autem nulla perferendis, aut ratione, ipsum sequi amet? In ipsa optio quisquam non ratione itaque porro accusamus.
+                a.main-header__scroll(href="#") scroll down
+        main
+            .blog__wrap
+                section.blog
+                    h2.visually-hidden Our Blog
+                    ul.blog__list
+                        li
+                            img(src="" alt="")
+                            a.blog__content(href="#")
+                                h3  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                time(datatime="2017-04-24") 24 April 2017
+                                span comments (13 783)
+                        li
+                            img(src="" alt="")
+
+                            a.blog__content(href="#")
+                                h3  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                time(datatime="2017-04-24") 24 April 2017
+                                span comments (13 783)
+                        li
+                            img(src="" alt="")
+
+                            a.blog__content(href="#")
+                                h3  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                time(datatime="2017-04-24") 24 April 2017
+                                span comments (13 783)
+                        li
+                            img(src="" alt="")
+
+                            a.blog__content(href="#")
+                                h3  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                time(datatime="2017-04-24") 24 April 2017
+                                span comments (13 783)
+            section.services
+                h2.main-title Our services
+                +simple-list("services", 8)
+
+            section.works
+                h2.visually-hidden Works
+                ul.works__list
+                    li
+                        img(src="" alt="")
+                        h3 Lorem ipsum
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates suscipit quo iste delectus molestias at maiores, autem architecto tempore.
+                        a.works__link share
+                    li
+                        img(src="" alt="")
+                        h3 Lorem ipsum
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates suscipit quo iste delectus molestias at maiores, autem architecto tempore.
+                        a.works__link share
+                    li
+                        img(src="" alt="")
+                        h3 Lorem ipsum
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates suscipit quo iste delectus molestias at maiores, autem architecto tempore.
+                        a.works__link share
+                    li
+                        img(src="" alt="")
+                        h3 Lorem ipsum
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates suscipit quo iste delectus molestias at maiores, autem architecto tempore.
+                        a.works__link share
+
+            section.team
+                h2.main-title Team
+                ul
+                    li
+                        .team__wrap-img
+                            img(src="" alt="")
+                            a.team__link.social-fb(href="#") facebook
+                            a.team__link.social-tw(href="#") twitter
+                            a.team__link.social-int(href="#") instagram
+                        h3.team__name John Doe
+                        p.team__proff Seo
+                        p.team__text   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis placeat sed voluptates, aperiam atque quis libero. Eos similique, fuga animi, sunt eum labore! Quo repellendus, maxime illo, cupiditate odio, iure, repellat vitae quas debitis laudantium aperiam.
+                    li
+                        .team__wrap-img
+                            img(src="" alt="")
+                            a.team__link.social-fb(href="#") facebook
+                            a.team__link.social-tw(href="#") twitter
+                            a.team__link.social-int(href="#") instagram
+                        h3.team__name John Doe
+                        p.team__proff Graphic artist
+                        p.team__text   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis placeat sed voluptates, aperiam atque quis libero. Eos similique, fuga animi, sunt eum labore! Quo repellendus, maxime illo, cupiditate odio, iure, repellat vitae quas debitis laudantium aperiam.
+                    li
+                        .team__wrap-img
+                            img(src="" alt="")
+                            a.team__link.social-fb(href="#") facebook
+                            a.team__link.social-tw(href="#") twitter
+                            a.team__link.social-int(href="#") instagram
+                        h3.team__name John Doe
+                        p.team__proff Senior SEO Specialist
+                        p.team__text   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis placeat sed voluptates, aperiam atque quis libero. Eos similique, fuga animi, sunt eum labore! Quo repellendus, maxime illo, cupiditate odio, iure, repellat vitae quas debitis laudantium aperiam.
+
+            section.contact
+                h2.contact__title
+                form(action="" method="post")
+
+        footer.main-footer
+            .logo Forest
+            nav.footer__nav
+                ul.footer__nav-list
+                    +li("footer__nav") Home
+                    +li("footer__nav") Our services
+                    +li("footer__nav") Team
+                    +li("footer__nav") Contact
+                ul.footer___social-list
+                    +li("footer__social") facebook
+                    +li("footer__social") twitter
+                    +li("footer__social") linkedin
+
+
+
+
+
+
+
+    

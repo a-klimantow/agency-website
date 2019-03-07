@@ -1,0 +1,11 @@
+mixin li(className)
+    li(class= className + "__item")
+        a(class= className + "__link")&attributes(attributes)
+            block
+
+mixin simple-list(className, item)
+    ul(class= className + "__list")
+        - for(var i=0; i<item; i++)
+            li(class= className + "__item")
+                h3 Lorem ipsum
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima corporis repudiandae, mollitia, quos iste repellat porro, inventore minus distinctio praesentium accusantium earum! Beatae, a ad odio! Id eos, libero inventore!
