@@ -1,6 +1,6 @@
 @import "_variables";
 html {
-    background-color: #ccc;
+    background-color: rgba(0, 0, 0, .1);
 }
 
 body {
@@ -67,7 +67,7 @@ img {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: radial-gradient(ellipse at center, transparent, rgba(0, 0, 0, .8));
+        background-image: radial-gradient(ellipse at center, transparent, #000);
 
     }
 }
@@ -143,8 +143,26 @@ img {
         text-transform: uppercase;
     }
     
-    &__link:hover {
-        text-decoration: underline;
+    &__link {
+        position: relative;
+    }
+
+    &__link::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0%;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        bottom: -5px;
+        transition: width .5s ease-in-out;
+    }
+
+    &__link:hover::before,
+    &__link:focus::before
+     {
+        width: 100%;  
     }
 }
 
@@ -287,10 +305,12 @@ img {
             z-index: 10;
             box-sizing: content-box;
             @include backfon;
+
         }
-        li>img {
-            height: auto;
-            width: 100%        }
+
+        li:hover .works__content {
+            opacity: 1;
+        }   
     }
 
     &__content {
@@ -298,10 +318,13 @@ img {
         z-index: 1;
         top: 50%;
         transform: translateY(-50%);
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
 
         h3 {
             font-size: 24px;
             margin-top: 0;
+
         }
         p {
             font-size: 14px;
@@ -333,6 +356,9 @@ img {
         overflow: hidden;
         margin: 0 auto;
         @include backfon;
+        & > img {
+            width: 100%;
+        }
     }
     &__link {
         display: inline-block;
@@ -445,13 +471,19 @@ img {
         border-radius: 5px;
         color: #72848c;
         font-size: 14px;
+        transition: border .5s ease-in-out;
+    }
+    &__input:hover,
+    &__input:focus,
+    &__input:active {
+        border-color: #72848c;
     }
     &__button {
         font-size: 14px;
         text-transform: uppercase;
         color: #fff;
         padding: 1.5em 1.5rem;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 }
 
