@@ -1,0 +1,24 @@
+$color_dark: #10131c;
+
+@mixin content_width {
+    max-width: 1175px;
+    margin: 0 auto;
+};
+
+@mixin backfon {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .0);
+        transition: all 1s ease;
+    }
+    &:hover::before {
+        background-color: rgba(0, 0, 0, .5);
+    }
+}
